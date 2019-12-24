@@ -3,7 +3,8 @@
 <ul>
     {{#each @people as |person|}}
         <li>
-            <button>{{person}}</button>
+            {{!-- fn helper passes the person as an argument --}}
+            <button {{ on 'click' (fn this.showPerson person) }}>{{person}}</button>
         </li>
     {{/each}}
 </ul>
