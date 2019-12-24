@@ -1,7 +1,8 @@
 # photo-uploader
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+- [ ] Upload JPG or PNG image to s3
+- [ ] Show image inside of an SVG in App from s3
+- [ ] Delete image from s3
 
 ## Prerequisites
 
