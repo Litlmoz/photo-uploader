@@ -1,11 +1,11 @@
 {
   "name": "photo-uploader",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "description": "Small description for photo-uploader goes here",
   "repository": "",
   "license": "MIT",
-  "author": "",
+  "author": "David Solis",
   "directories": {
     "doc": "doc",
     "test": "tests"
