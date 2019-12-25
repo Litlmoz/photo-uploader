@@ -7,20 +7,16 @@ module('Integration | Component | people-list', function(hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function(assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
+    assert.expect(2);
 
-    await render(hbs`<PeopleList />`);
+    this.set('person', 'Marie Curie');
+    await render(hbs`<PeopleList @title="List of Scientists" @people={{this.person}} />`);
 
-    assert.equal(this.element.textContent.trim(), '');
+    assert.equal(this.element.textContent.trim(), 'List of Scientists', 'Marie Curie');
 
-    // Template block usage:
-    await render(hbs`
-      <PeopleList>
-        template block text
-      </PeopleList>
-    `);
+    this.set('person', 'Mae Jemison');
+    await render(hbs`<PeopleList @title="List of Scientists" @people={{this.person}} />`);
 
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.equal(this.element.textContent.trim(), 'List of Scientists', 'Mae Jemison');
   });
 });
