@@ -52,5 +52,8 @@
   },
   "ember": {
     "edition": "octane"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.596.0"
   }
 }
