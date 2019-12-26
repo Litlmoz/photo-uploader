@@ -4,7 +4,7 @@
     {{#each @people as |person|}}
         <li>
             {{!-- fn helper passes the person as an argument --}}
-            <button {{ on 'click' (fn this.showPerson person) }}>{{person}}</button>
+            <button {{ on 'click' (fn this.showPerson person) }} class="showPerson">{{person}}</button>
         </li>
     {{/each}}
 </ul>
